@@ -18,7 +18,7 @@
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="_css/style2.css">
 
 </head>
 
@@ -40,8 +40,8 @@
 
 
             <div class="mb-3">
-                <label for="desc" class="form-label">Descrição do Produto</label>
-                <textarea name="desc" class="form-control" id="desc" cols="20" rows="10"
+                <label for="desc" class="form-label">Breve Descrição do Produto</label>
+                <textarea name="desc1" class="form-control" id="desc1" cols="20" rows="5"
                     style="resize: none"></textarea>
             </div>
 
@@ -49,20 +49,20 @@
             <div class="mb-3">
 
                 <label for="tag">TAGS:</label>
-                <input type="text" class="form-control" name="tag" id="tag" value="{tag}" required>
+                <input type="text" class="form-control" name="tag" id="tag" required>
 
             </div>
 
             <div class="mb-3">
                 <label for="address">Link Alternativo:</label>
-                <input type="text" name="address" id="address" class="wc_logradouro form-control" value="{address}"
+                <input type="text" class="wc_logradouro form-control" 
                     required>
 
             </div>
 
             <div class="mb-3">
                 <label for="district">Codigo</label>
-                <input type="text" name="district" id="district" class="wc_bairro form-control" value="{district}"
+                <input type="text"  class="wc_bairro form-control" 
                     required>
 
             </div>
@@ -71,30 +71,126 @@
             <div class="mb-3">
 
                 <label for="complement">Unidade de Medida</label>
-                <input type="text" name="complement" id="complement" class="wc_complemento form-control"
-                    value="{complement}" required>
+                <select class="form-select" aria-label="Default select example">
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
             </div>
 
 
             <div class="mb-3">
 
                 <label for="number">Marca/Fabricante</label>
-                <input type="text" name="number" id="number" class="wc_numero form-control" value="{number}" required>
+                <select class="form-select" aria-label="Default select example">
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
 
+            </div>
+
+            
+            <div class="mb-3">
+                <label for="desc" class="form-label">Descrição do Produto</label>
+                <textarea name="desc" class="form-control" id="desc" cols="50" rows="20"
+                style="resize: none"></textarea>
+            </div>
+
+            <div class="dimensions">
+
+                <h4>Dimensoes Do Produto</h4>
+
+                <div id="dimensionid">
+                    
+                                    <div class="mb-3">
+                                        <label for="district">Altura(Cm)</label>
+                                        <input type="text"  class="wc_bairro form-control" 
+                                            required>
+                            
+                                    </div>
+                        
+                                    <div class="mb-3">
+                                        <label for="district">Largura(Cm)</label>
+                                        <input type="text"  class="wc_bairro form-control" 
+                                            required>
+                            
+                                    </div>
+                        
+                                    <div class="mb-3">
+                                        <label for="district">Profundidade(Cm)</label>
+                                        <input type="text"  class="wc_bairro form-control" 
+                                            required>
+                            
+                                    </div>
+                        
+                                    <div class="mb-3">
+                                        <label for="district">Peso Em(G)</label>
+                                        <input type="text"  class="wc_bairro form-control" 
+                                            required>
+                            
+                                    </div>
+
+                </div>
             </div>
         </main>
+        
 
         <aside>
-            <div class="mb-3">
+            <div class="price-format">
 
-                <label for="phone">Preço</label>
-                <input type="text" name="phone" id="phone" class="formPhone form-control" value="{phone}" required
-                    style="width: 50%">
+                <h5>Formação de Preço</h5>
+                <div class="mb-3">
+
+                    <label for="phone">Preço de Custo</label>
+                    <input type="text"  class="formPhone form-control" required
+                        style="width: 50%">
+                </div>
+                <div class="mb-3">
+    
+                    <label for="phone">Margem / Lucro</label>
+                    <input type="text"  class="formPhone form-control" required
+                        style="width: 50%">
+                </div>
             </div>
+            
+            <div class="price-filed">
+                <h5>Preço cheio</h5>
+                <div class="mb-3">
+    
+                    <label for="phone">Preço cheio R$:</label>
+                    <input type="text"  class="formPhone form-control" required
+                        style="width: 50%">
+                </div>
+            </div>
+            <div class="discount-price"> 
+                <h5>Configurar Promoção</h5>
 
-            <div class="mb-3">
-                <label for="mail">Porcentagem de Desconto</label>
-                <input type="email" name="mail" id="mail" value="{mail}" required class="form-control">
+               
+
+                <div class="mb-3">
+                    <label for="mail">Porcentagem de Desconto</label>
+                    <input type="email"  required class="form-control">
+    
+                </div>
+
+                <div class="mb-3">
+                    <label for="mail">Preço Promocional</label>
+                    <input type="email"  required class="form-control">
+    
+                </div>
+
+                <div class="mb-3">
+                    <label for="mail">Início da Promoção</label>
+                    <input type="email"  required class="form-control">
+    
+                </div>
+
+                <div class="mb-3">
+                    <label for="mail">Fim da Promoção</label>
+                    <input type="email"  required class="form-control">
+    
+                </div>
 
             </div>
 
