@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Atualizar Pessoas</title>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.form.js"></script>
+    <script src="js/maskinput.js"></script>
+    <script src="js/script.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="style2.css">
+
+</head>
+
+<body>
+
+    <form action="index.php?class=CompanyForm&method=save" class="form_capitalize" method="post"
+        enctype="multipart/form-data">
+
+        <!-- Teste commit em casa -->
+
+
+        <main>
+
+
+            <div class="mb-3">
+                <label for="name" class="form-label">Nome do Produto</label>
+                <input type="text" class="form-control" name="name" id="name" value="{name}" required>
+            </div>
+
+
+            <div class="mb-3">
+                <label for="desc" class="form-label">Descrição do Produto</label>
+                <textarea name="desc" class="form-control" id="desc" cols="20" rows="10"
+                    style="resize: none"></textarea>
+            </div>
+
+
+            <div class="mb-3">
+
+                <label for="tag">TAGS:</label>
+                <input type="text" class="form-control" name="tag" id="tag" value="{tag}" required>
+
+            </div>
+
+            <div class="mb-3">
+                <label for="address">Link Alternativo:</label>
+                <input type="text" name="address" id="address" class="wc_logradouro form-control" value="{address}"
+                    required>
+
+            </div>
+
+            <div class="mb-3">
+                <label for="district">Codigo</label>
+                <input type="text" name="district" id="district" class="wc_bairro form-control" value="{district}"
+                    required>
+
+            </div>
+
+
+            <div class="mb-3">
+
+                <label for="complement">Unidade de Medida</label>
+                <input type="text" name="complement" id="complement" class="wc_complemento form-control"
+                    value="{complement}" required>
+            </div>
+
+
+            <div class="mb-3">
+
+                <label for="number">Marca/Fabricante</label>
+                <input type="text" name="number" id="number" class="wc_numero form-control" value="{number}" required>
+
+            </div>
+        </main>
+
+        <aside>
+            <div class="mb-3">
+
+                <label for="phone">Preço</label>
+                <input type="text" name="phone" id="phone" class="formPhone form-control" value="{phone}" required
+                    style="width: 50%">
+            </div>
+
+            <div class="mb-3">
+                <label for="mail">Porcentagem de Desconto</label>
+                <input type="email" name="mail" id="mail" value="{mail}" required class="form-control">
+
+            </div>
+
+        </aside>
+
+
+
+
+
+
+
+        <label class="actions">
+            <a href="index.php?class=CompanyList" class="btn btn-ligth-gray">
+                <img src='images/icons8-cancel-50.svg' style='width:25px'>
+                VOLTAR</a>
+
+            <button class='btn btn-ligth-gray' type='submit'>
+                <img src='images/icons8-settings-50.svg' style='width:25px'>
+                SALVAR
+            </button>
+        </label>
+    </form>
+
+</body>
+
+</html>
