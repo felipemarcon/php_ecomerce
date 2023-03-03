@@ -22,9 +22,9 @@
 
 </head>
 
-<body>
+<body style="padding: 50px 80px;">
 
-    <form action="index.php?class=CompanyForm&method=save" class="form_capitalize" method="post"
+    <form action="index.php?class=ProductForm&method=save" class="form_capitalize" method="post"
         enctype="multipart/form-data">
 
         <!-- Teste commit em casa -->
@@ -34,35 +34,35 @@
 
 
             <div class="mb-3">
-                <label for="name" class="form-label">Nome do Produto</label>
-                <input type="text" class="form-control" name="name" id="name" value="{name}" required>
+                <label for="pdt_name" class="form-label">Nome do Produto</label>
+                <input type="text" class="form-control" name="pdt_name" id="pdt_name" value="{pdt_name}" required>
             </div>
 
 
             <div class="mb-3">
-                <label for="desc" class="form-label">Breve Descrição do Produto</label>
-                <textarea name="desc1" class="form-control" id="desc1" cols="20" rows="5"
-                    style="resize: none"></textarea>
+                <label for="pdt_descbreve" class="form-label">Breve Descrição do Produto</label>
+                <textarea name="pdt_descbreve" class="form-control" id="pdt_descbreve" cols="20" rows="5"
+                    style="resize: none" value="{pdt_descbreve}"></textarea>
             </div>
 
 
             <div class="mb-3">
 
-                <label for="tag">TAGS:</label>
-                <input type="text" class="form-control" name="tag" id="tag" required>
+                <label for="pdt_tag">TAGS:</label>
+                <input type="text" class="form-control" name="pdt_tag" id="pdt_tag" value="{pdt_tag}" required>
 
             </div>
 
             <div class="mb-3">
-                <label for="address">Link Alternativo:</label>
-                <input type="text" class="wc_logradouro form-control" 
+                <label for="pdt_link">Link Alternativo:</label>
+                <input type="text" name="pdt_link" id="pdt_link" class="wc_logradouro form-control" value="{pdt_link}"
                     required>
 
             </div>
 
             <div class="mb-3">
-                <label for="district">Codigo</label>
-                <input type="text"  class="wc_bairro form-control" 
+                <label for="pdt_cod">Codigo</label>
+                <input type="text" name="pdt_cod" id="pdt_cod" class="wc_bairro form-control" value="{pdt_cod}"
                     required>
 
             </div>
@@ -70,31 +70,33 @@
 
             <div class="mb-3">
 
-                <label for="complement">Unidade de Medida</label>
-                <select class="form-select" aria-label="Default select example">
+                <label for="pdt_unit">Unidade de Medida</label>
+                <select class="form-select" name="pdt_unit" id="pdt_unit" aria-label="Default select example"
+                    value="{pdt_unit}">
                     <option value="1">One</option>
                     <option value="2">Two</option>
                     <option value="3">Three</option>
-                  </select>
+                </select>
             </div>
 
 
             <div class="mb-3">
 
-                <label for="number">Marca/Fabricante</label>
-                <select class="form-select" aria-label="Default select example">
+                <label for="pdt_brand">pdt_brand/Fabricante</label>
+                <select class="form-select" name="pdt_brand" id="pdt_brand" aria-label="Default select example"
+                    value="{pdt_brand}">
                     <option value="1">One</option>
                     <option value="2">Two</option>
                     <option value="3">Three</option>
-                  </select>
+                </select>
 
             </div>
 
-            
+
             <div class="mb-3">
-                <label for="desc" class="form-label">Descrição do Produto</label>
-                <textarea name="desc" class="form-control" id="desc" cols="50" rows="20"
-                style="resize: none"></textarea>
+                <label for="pdt_desc" class="form-label">Descrição do Produto</label>
+                <textarea name="pdt_desc" class="form-control" id="pdt_desc" cols="50" rows="20" style="resize: none"
+                    value="{pdt_desc}"></textarea>
             </div>
 
             <div class="dimensions">
@@ -102,39 +104,39 @@
                 <h4>Dimensoes Do Produto</h4>
 
                 <div id="dimensionid">
-                    
-                                    <div class="mb-3">
-                                        <label for="district">Altura(Cm)</label>
-                                        <input type="text"  class="wc_bairro form-control" 
-                                            required>
-                            
-                                    </div>
-                        
-                                    <div class="mb-3">
-                                        <label for="district">Largura(Cm)</label>
-                                        <input type="text"  class="wc_bairro form-control" 
-                                            required>
-                            
-                                    </div>
-                        
-                                    <div class="mb-3">
-                                        <label for="district">Profundidade(Cm)</label>
-                                        <input type="text"  class="wc_bairro form-control" 
-                                            required>
-                            
-                                    </div>
-                        
-                                    <div class="mb-3">
-                                        <label for="district">Peso Em(G)</label>
-                                        <input type="text"  class="wc_bairro form-control" 
-                                            required>
-                            
-                                    </div>
+
+                    <div class="mb-3">
+                        <label for="pdt_height">Altura(Cm)</label>
+                        <input type="text" name="pdt_height" id="pdt_height" class="form-control" value="{pdt_height}"
+                            required>
+
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="pdt_width">Largura(Cm)</label>
+                        <input type="text" name="pdt_width" id="pdt_width" class="form-control" value="{pdt_width}"
+                            required>
+
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="pdt_depth">Profundidade(Cm)</label>
+                        <input type="text" id="pdt_depth" name="pdt_depth" class="form-control" value="{pdt_depth}"
+                            required>
+
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="pdt_weight">Peso Em(G)</label>
+                        <input type="text" name="pdt_weight" id="pdt_weight" class="form-control" value="{pdt_weight}"
+                            required>
+
+                    </div>
 
                 </div>
             </div>
         </main>
-        
+
 
         <aside>
             <div class="price-format">
@@ -142,54 +144,58 @@
                 <h5>Formação de Preço</h5>
                 <div class="mb-3">
 
-                    <label for="phone">Preço de Custo</label>
-                    <input type="text"  class="formPhone form-control" required
+                    <label for="pdt_price">Preço de Custo</label>
+                    <input type="text" id="pdt_price" name="pdt_price" class="form-control" value="{pdt_price}" required
                         style="width: 50%">
                 </div>
                 <div class="mb-3">
-    
-                    <label for="phone">Margem / Lucro</label>
-                    <input type="text"  class="formPhone form-control" required
-                        style="width: 50%">
+
+                    <label for="pdt_profit">Margem / Lucro</label>
+                    <input type="text" name="pdt_profit" id="pdt_profit" class="form-control" value="{pdt_profit}"
+                        required style="width: 50%">
                 </div>
             </div>
-            
+
             <div class="price-filed">
                 <h5>Preço cheio</h5>
                 <div class="mb-3">
-    
-                    <label for="phone">Preço cheio R$:</label>
-                    <input type="text"  class="formPhone form-control" required
-                        style="width: 50%">
+
+                    <label for="pdt_fullprice">Preço cheio R$:</label>
+                    <input type="text" id="pdt_fullprice" name="pdt_fullprice" class="form-control"
+                        value="{pdt_fullprice}" required style="width: 50%">
                 </div>
             </div>
-            <div class="discount-price"> 
+            <div class="discount-price">
                 <h5>Configurar Promoção</h5>
 
-               
+
 
                 <div class="mb-3">
-                    <label for="mail">Porcentagem de Desconto</label>
-                    <input type="email"  required class="form-control">
-    
+                    <label for="text">Porcentagem de Desconto</label>
+                    <input type="text" name="pdt_discount" id="pdt_discount" value="{pdt_discount}" required
+                        class="form-control">
+
                 </div>
 
                 <div class="mb-3">
-                    <label for="mail">Preço Promocional</label>
-                    <input type="email"  required class="form-control">
-    
+                    <label for="pdt_pricepromo">Preço Promocional</label>
+                    <input type="text" name="pdt_pricepromo" id="pdt_pricepromo" value="{pdt_pricepromo}" required
+                        class="form-control">
+
                 </div>
 
                 <div class="mb-3">
-                    <label for="mail">Início da Promoção</label>
-                    <input type="email"  required class="form-control">
-    
+                    <label for="pdt_startpromo">Início da Promoção</label>
+                    <input type="text" name="pdt_startpromo" id="pdt_startpromo" value="{pdt_startpromo}" required
+                        class="form-control">
+
                 </div>
 
                 <div class="mb-3">
-                    <label for="mail">Fim da Promoção</label>
-                    <input type="email"  required class="form-control">
-    
+                    <label for="pdt_endpromo">Fim da Promoção</label>
+                    <input type="text" name="pdt_endpromo" id="pdt_endpromo" value="{pdt_endpromo}" required
+                        class="form-control">
+
                 </div>
 
             </div>

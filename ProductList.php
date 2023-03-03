@@ -1,8 +1,8 @@
 <?php
 
-    require_once __DIR__ . '/classes/Company.php';
+    require_once __DIR__ . '/classes/Product.php';
 
-class CompanyList
+class ProductList
 {
     private $html;
 
@@ -15,7 +15,7 @@ class CompanyList
     {
         try {
             $id = (int)$param['id'];
-            Company::delete($id);
+            Product::delete($id);
         } catch (Exception $e) {
             print $e->getMessage();
         }
@@ -25,18 +25,18 @@ class CompanyList
     {
         try {
             $rows = '';
-            foreach (Company::all() as $company) {
+            foreach (Product::all() as $product) {
                 $row = file_get_contents('html/row.html');
 
                 $row = str_replace(
-                    ['{id}', '{company_name}', '{company_city}', '{company_state}','{company_phone}','{company_mail}'],
+                    ['{id}', '{product_name}', '{product_city}', '{product_state}','{product_phone}','{product_mail}'],
                     [
-                        $company['id'],
-                        $company['name'],
-                        $company['city'],
-                        $company['state'],
-                        $company['phone'],
-                        $company['mail']
+                        $product['id'],
+                        $product['name'],
+                        $product['city'],
+                        $product['state'],
+                        $product['phone'],
+                        $product['mail']
                     ],
                     $row
                 );
